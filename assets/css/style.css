@@ -39,6 +39,7 @@ body {
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .site-logo {
@@ -59,6 +60,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  position: relative;
 }
 
 .header-search-input {
@@ -165,6 +167,23 @@ body {
   color: #666;
 }
 
+.results-section {
+  margin-bottom: 3rem;
+}
+
+.results-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
 .results-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -263,38 +282,6 @@ body {
 .btn-back:hover {
   background-color: #1a1a1a;
   color: #fff;
-}
-
-/* === FOOTER === */
-
-.site-footer {
-  background-color: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
-  padding: 2rem 1rem;
-  margin-top: auto;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.footer-container p {
-  font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.footer-link {
-  color: #1a1a1a;
-  text-decoration: none;
-  border-bottom: 1px solid #ddd;
-  transition: border-color 0.2s ease;
-}
-
-.footer-link:hover {
-  border-color: #1a1a1a;
 }
 
 /* === PAGE DÉTAIL PHOTO === */
@@ -398,6 +385,38 @@ body {
   color: #fff;
 }
 
+/* === FOOTER === */
+
+.site-footer {
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-container p {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  transition: border-color 0.2s ease;
+}
+
+.footer-link:hover {
+  border-color: #1a1a1a;
+}
+
 /* === RESPONSIVE - TABLETTE === */
 @media (min-width: 768px) {
   .site-header {
@@ -439,6 +458,14 @@ body {
 
   .results-title {
     font-size: 2rem;
+  }
+
+  .photo-detail-title {
+    font-size: 2.5rem;
+  }
+
+  .photo-detail-meta {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

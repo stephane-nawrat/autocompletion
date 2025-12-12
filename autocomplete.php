@@ -12,6 +12,17 @@ require_once 'config/database.php';
 // Définir le header JSON (important !)
 header('Content-Type: application/json');
 
+// Si paramètre 'all', retourner toutes les photos
+if (isset($_GET['all'])) {
+    $sql = "SELECT id, title, year, location, description, image_url 
+            FROM photographs 
+            ORDER BY year DESC";
+    $stmt = $pdo->query($sql);
+    $allPhotos = $stmt->fetchAll();
+    echo json_encode($allPhotos, JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 // Récupérer le terme de recherche depuis l'URL
 $query = $_GET['q'] ?? '';
 

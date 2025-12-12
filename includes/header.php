@@ -26,4 +26,7 @@
                 <button type="submit" class="header-search-button"></button>
             </form>
         </div>
+        <script src="assets/js/autocomplete.js" defer></script>
+        </head>
+
     </header>
