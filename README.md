@@ -19,29 +19,30 @@ Application web avec système d'autocomplétion intelligent permettant de recher
 ## Architecture du projet
 ```
 autocompletion/
-├── index.php              Page d'accueil moteur de recherche
-├── recherche.php          Page résultats de recherche
-├── element.php            Page détail d'une photographie
-├── autocomplete.php       API pour suggestions (JSON)
-├── .env                   Variables d'environnement (non versionné)
-├── .env.example           Template variables d'environnement
+├── index.php              Page accueil
+├── recherche.php          Page résultats
+├── element.php            Page détail photo
+├── autocomplete.php       API suggestions JSON
+├── .env                   Variables environnement (non versionné)
+├── .env.example           Template .env
+├── .gitignore             Fichiers exclus
+├── README.md              Documentation
 ├── config/
-│   └── database.php       Connexion base de données
+│   └── database.php       Connexion PDO
 ├── assets/
 │   ├── css/
 │   │   └── style.css      Styles responsive
 │   └── js/
-│       └── autocomplete.js Script autocomplétion
+│       └── autocomplete.js JavaScript
 ├── includes/
 │   ├── header.php         Header réutilisable
 │   └── footer.php         Footer réutilisable
 ├── sql/
-│   └── setup.sql          Script création BDD et données
-├── .gitignore             Fichiers exclus du versioning
-└── README.md              Documentation (ce fichier)
-```
-
-## Installation en local
+│   └── setup.sql          Script création BDD
+└── tests/
+    ├── README.md          Documentation tests
+    └── test_db.php        Test connexion PDO
+````
 
 ## Installation en local
 
